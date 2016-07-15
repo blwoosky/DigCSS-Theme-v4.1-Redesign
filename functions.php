@@ -46,50 +46,51 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 				case 'pingback' :
 				case 'trackback' :
 			?>
-			<li class="post pingback p10 bgp bShadow">
-				<p><?php _e( 'Pingback:', 'twentyeleven' );?> <?php comment_author_link();?><?php edit_comment_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' );?></p>
+			<li class="commentItem mb10 rel moduleBox p15">
+            
+				    <p><?php _e( 'Pingback:', 'twentyeleven' );?> <?php comment_author_link();?><?php edit_comment_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' );?></p>
+                
 				<?php
 					break;
 				default :
 				?>
-			<li class="p10 bgp bShadow" <?php comment_class();?> id="li-comment-<?php comment_ID();?>">
-				<div id="comment-<?php comment_ID();?>" class="rel">
-					<div class="clearfix">
-						<div class="img">
-						<?php
-							echo get_avatar( $comment, 100 );
-						?>
-						</div>
-						<div class="vcard">
-							<b><?php comment_author_link();?></b>
-							<i><?php comment_time( 'Y.m.d' );?></i>
-						</div>
-					</div>
-					
-					<div class="comment-content">
-						
-						<div class="comment-body">
-							<?php comment_text();?>
-						</div>
-					</div>
-					<div class="reply">
-						<span class="btn btn-xs btn-primary">
-							<?php comment_reply_link( array_merge( $args, array('reply_text' =>'回复', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );?>
-						</span>
-					</div>
-				</div>
+
+			<li class="commentItem moduleBox p15 mb10 <?php comment_class();?> " id="li-comment-<?php comment_ID();?>">
+                <div class="rel fix" id="comment-<?php comment_ID();?>">
+            
+				    <div class="l gravatar mr20">
+                        <?php
+                            echo get_avatar( $comment, 100 );
+                        ?>
+                    </div>
+
+                    <div class="cell">
+
+                        <div class="authorMeta">
+                            <?php comment_author_link();?>
+                            <div class="commentsDate">
+                                <?php comment_time( 'Y.m.d' );?>
+                            </div>
+                        </div>
+
+                        <div class="commentContent">
+                            <?php comment_text();?>
+                        </div>
+
+                    </div>
+                    
+                    <div class="btns reply_btn abs">
+                        <?php comment_reply_link( array_merge( $args, array('reply_text' =>'回复', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );?>
+                    </div>
+			    </div>
+                    
 		<?php
 			break;
 		endswitch;
 		}
 	endif;
 
-	add_action('after_setup_theme', 'remove_admin_bar');
-	function remove_admin_bar() {
-		if (!current_user_can('administrator') && !is_admin()) {
-			show_admin_bar(false);
-		}
-	}
+	show_admin_bar(false);
 
 
 	add_filter('user_can_richedit' , create_function('' , 'return false;') , 50);

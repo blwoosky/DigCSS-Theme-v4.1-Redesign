@@ -4,18 +4,19 @@
 */
 get_header(); 
 ?>
-<div class="row p30">
-<!-- Start left column -->
-	<div class="col-md-9 col-lg-8">
-		<div class="p10 bgp">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div class="">
-					<?php the_content(); ?> 
-				</div>
-			<?php endwhile; endif; ?>
-		</div>
-		<?php comments_template(); ?>
-	</div>
+<div class="fix">
 
-<?php get_sidebar(); ?>
+    <div class="l col-2-3"><!-- Start left column -->
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div class="moduleBox">
+            <div class="p15">
+                <?php the_content(); ?>
+            </div>
+        </div>
+        <?php endwhile; endif; ?>
+        <?php comments_template(); ?>
+    </div>
+
+    <?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

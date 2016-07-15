@@ -1,5 +1,5 @@
-<div class="r searchForm rel" action="<?php bloginfo('siteurl'); ?>" method="get">
-    <form>
+<div class="r searchForm rel">
+    <form action="<?php bloginfo('url');?>" method="get">
         <button class="searchBtn">
             <svg viewBox="0 0 100 100">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>

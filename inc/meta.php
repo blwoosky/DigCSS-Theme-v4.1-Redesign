@@ -1,7 +1,14 @@
-<div class="arcMeta">
-	<time class="metaItem"><?php the_time('Y.m.d') ?></time>
-	<span>|</span>
-	<span class="metaItem midItem"><?php the_category(',');?>
-	</span><span>|</span>
-	<span class="metaItem"><?php comments_popup_link('No Comments', '1 Comment', '% Comments', 'comments-link', ''); ?></span>
+<div class="postMeta">
+	<div class="postDate">
+		<b><?php the_time('Y.m.d') ?></b>
+	</div>
+	<div class="commentsNo">
+		<svg viewBox="0 0 100 100">
+			<use xlink:href="#icon-bubbles2"></use>
+		</svg>
+		<?php comments_popup_link('暂无评论', '一条评论', '% 条评论', 'comments-link', ''); ?>
+	</div>
+	<div class="tags">
+		<?php the_category(',');?>
+	</div>
 </div>

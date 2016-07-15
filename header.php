@@ -92,7 +92,7 @@
                 <nav class="mainNav l">
 
                     <ul class="fix">
-                        <li class="home"><a href="/" class="active">
+                        <li class="home"><a href="/">
                             <svg viewBox="0 0 100 100" class="icon icon-home">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-home"></use>
                             </svg>
@@ -123,3 +123,6 @@
             </div>
         </div>
     </header>
+
+    <div class="wrap">
+        <div class="mainWrap">
