@@ -79,7 +79,14 @@
 					while ( $the_query->have_posts() ) :
                         $the_query->the_post();
                         ?>
-                        <li><a href="<?php the_permalink();?>" class="trans"><?php the_title();?></a></li>
+                        <li>
+                            <a href="<?php the_permalink();?>" class="trans">
+                                <svg viewBox="0 0 100 100">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-keyboard"></use>
+                                </svg>
+                                <?php the_title();?>
+                            </a>
+                        </li>
                         <?php endwhile;?>
                     </ul>
                 </div>
@@ -106,7 +113,8 @@
         ?>
 
         <div class="sideItem mt10" rel="recommend">
-            <div class="moduleBox sideList">
+            <div class="moduleBox sideList rel">
+                <a href="/recarticles" class="recommendMoreBtn">More &gt;&gt;</a>
                 <div class="p15">
                     <ul>
                         <?php
@@ -131,7 +139,6 @@
         </div>
         <?php  endif;wp_reset_postdata();?>
         <?php #end latest recarticles?>
-
 
 
     </div> <!-- End SidrBar -->

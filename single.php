@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="fix">
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
         <!-- Start left column -->
         <div class="postPage" id="post-<?php the_ID(); ?>">
             <h1 class="postTitle tac">

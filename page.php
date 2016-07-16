@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="fix">
 
-    <div class="l col-2-3"><!-- Start left column -->
+    <div class="l col-2-3 loadBox"><!-- Start left column -->
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="moduleBox">
             <div class="p15">

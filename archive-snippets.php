@@ -5,9 +5,8 @@
 ?>
 <div class="fix" id="post-<?php the_ID(); ?>">
 
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
         <!-- Start left column -->
-
         <div class="pl20 pr20 commonPageTitle">
             <div class="moduleBox">
                 <div class="list-inline tac snippetsTagMenu">

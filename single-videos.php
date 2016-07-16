@@ -1,7 +1,7 @@
 <?php
 get_header(); 
 ?>
-<div class="p30 video_wrap text-center">
+<div class="p15 video_wrap">
 
     <h1 class="tac postTitle"><?php the_title(); ?></h1>
     <div class="videoBox mt10">
@@ -18,6 +18,7 @@ get_header();
             <div class="postDate">
                 <b><?php the_time('Y.m.d') ?></b>
             </div>
+            <span class="split">|</span>
             <div class="commentsNo">
                 <svg viewBox="0 0 100 100">
                     <use xlink:href="#icon-bubbles2"></use>
@@ -37,7 +38,7 @@ get_header();
                     <?php the_content();?>
                 </div>
                 <div class="mt10 tar">
-                    如果讨厌广告,可以: <a class="btn" target="_blank" href="<?php the_field('video_dlink');?>">下载高清视频</a>
+                    你也可以: <a class="btn" target="_blank" href="<?php the_field('video_dlink');?>">下载高清视频</a>
                 </div>
             </div>
 

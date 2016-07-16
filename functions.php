@@ -93,5 +93,4 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 	show_admin_bar(false);
 
 
-	add_filter('user_can_richedit' , create_function('' , 'return false;') , 50);
 ?>

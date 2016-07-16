@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!-- Start left column -->
 <div class="fix">
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
         <div class="homePosts">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -14,7 +14,7 @@
                         <h2 class="commonListTitle">
                             <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
                         </h2>
-                        <div class="postExcerpt">
+                        <div class="postContent">
                             <?php the_excerpt(); ?>
                         </div>
                         <div class="mt10 tar">

@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="fix">
 
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="singleCourse mb30">
@@ -106,6 +106,9 @@ get_header();
             </div>
         </div>
         <?php endwhile; endif; ?>
+
+        <?php if (function_exists('oposts_show')) oposts_show(); ?>
+        <?php comments_template(); ?>
 
 
     </div>

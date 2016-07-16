@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="fix">
 
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
         <div class="courseList">
 
             <?php

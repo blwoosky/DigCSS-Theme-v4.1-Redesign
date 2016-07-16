@@ -5,8 +5,9 @@
 ?>
 <div class="fix" id="post-<?php the_ID(); ?>">
 
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
         <!-- Start left column -->
+        <input type="hidden" name="currentSnippetName" value="<?php single_tag_title()?>">
 
         <div class="pl20 pr20 commonPageTitle">
             <div class="moduleBox">

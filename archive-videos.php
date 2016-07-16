@@ -5,7 +5,7 @@
 ?>
 <div class="fix">
 
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
 
         <div class="thumbnailList">
             <?php
@@ -18,6 +18,7 @@
                     <div class="postDate">
                         <b><?php the_time('Y.m.d') ?></b>
                     </div>
+                    <span class="split">|</span>
                     <div class="commentsNo">
                         <svg viewBox="0 0 100 100">
                             <use xlink:href="#icon-bubbles2"></use>
@@ -59,8 +60,8 @@
         </div>
 
 
-    </div>
+</div>
 
-    <?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

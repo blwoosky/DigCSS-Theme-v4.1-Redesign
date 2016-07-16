@@ -59,5 +59,7 @@
 
 <?php wp_footer(); ?>
 
+<script src="<?php bloginfo('template_url');?>/build/main.js"></script>
+<!--<script src="http://localhost:3001/main.js"></script>-->
 </body>
 </html>

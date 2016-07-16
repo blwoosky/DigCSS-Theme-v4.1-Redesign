@@ -44,9 +44,9 @@ This post is password protected. Enter the password to view comments.
 </div>
 
 
-<div id="respond" class="respond">
+<div id="respond" class="respond mb10">
 
-    <div class="tar cancel-comment-reply">
+    <div class="tar cancel-comment-reply mb10">
         <?php cancel_comment_reply_link(); ?>
     </div>
     <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
@@ -66,23 +66,28 @@ This post is password protected. Enter the password to view comments.
             </p>
 
             <?php else : ?>
+
             <div class="f14">
-                <p class="pt10 pb10">
-                    您可以填写以上信息后留言，或者使用右侧方式登录后进行留言-&gt;
+                <p class="pt10 pb10 pl10">
+                    您可以使用
                     <a href="http://digcss.com/digcss/wp-content/plugins/wp-connect/login.php?go=qzone"
-                       title="用QQ登录" class="sns_btn">
+                            title="用QQ登录" class="sns_btn vm">
                         <svg viewBox="0 0 100 100">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-qq"></use>
                         </svg>
                     </a>
+                    或
                     <a href="http://digcss.com/digcss/wp-content/plugins/wp-connect/login.php?go=sina"
-                       title="用新浪微博登录" class="sns_btn">
+                       title="用新浪微博登录" class="sns_btn vm">
                         <svg viewBox="0 0 100 100">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-weibo1"></use>
                         </svg>
                     </a>
+                    登录后进行留言,也可以填写以下信息后进行留言:
+
                 </p>
             </div>
+
             <div class="fix mainWrap inputs">
                 <div class="col-1-3 l">
                     <input type="text" class="form-control" placeholder="昵称 (必填)" name="author" id="author"

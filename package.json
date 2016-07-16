@@ -1,0 +1,28 @@
+{
+  "name": "DigCSS-Theme-v4",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "css-loader": "^0.23.1",
+    "extract-loader": "0.0.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "jquery": "^3.1.0",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "start": "NODE_ENV=development webpack && webpack-dev-server --hot --inline --port 3001",
+    "production": "NODE_ENV=production webpack && webpack-dev-server --hot --inline --port 3001"
+  }
+}

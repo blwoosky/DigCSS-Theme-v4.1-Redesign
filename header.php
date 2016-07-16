@@ -73,7 +73,7 @@
 
 <div class="mt30">
 
-    <header class="">
+    <header class="pageHeader">
         <div class="wrap mainNavWrap fix">
             <div class="logo l">
                 <a href="/">

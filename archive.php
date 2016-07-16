@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <div class="fix" id="post-<?php the_ID(); ?>">
 
-    <div class="l col-2-3">
+    <div class="l col-2-3 loadBox">
         <div>
-            <?php $posts = query_posts($query_string . '&orderby=date&showposts=-1'); ?>
+            <?php $posts = query_posts($query_string . '&orderby=date&showposts=8'); ?>
             <div class="p10">
                 <?php if (have_posts()) : ?>
                 <?php /* If this is a category archive */ if (is_category()) { ?>
@@ -47,6 +47,9 @@
             <?php else : ?>
             <p class="BoxInner nothing">啥都没有...</p>
             <?php endif; ?>
+        </div>
+        <div class="mb30 mt20 tac">
+            <?php if(function_exists('wp_page_numbers')) { wp_page_numbers("<div class='pagination'>","</div>"); } ?>
         </div>
     </div>
     <?php get_sidebar(); ?>
