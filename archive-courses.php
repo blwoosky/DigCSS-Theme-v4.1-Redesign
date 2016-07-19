@@ -1,7 +1,7 @@
 <?php
   get_header();
   global $query_string;
-  query_posts($query_string . '&posts_per_page=6&paged='.$paged);
+  query_posts($query_string . '&posts_per_page=8&paged='.$paged);
 ?>
 <div class="fix">
 
@@ -23,7 +23,7 @@
                         <img src="<?php the_field('cover_img');?>" alt="<?php the_title() ?>"/>
                     </div>
                     <div class="courseIntro">
-                        <?php the_excerpt(); ?>
+                        <?php the_field('course_intro'); ?>
                     </div>
                     <div class="mt10 tar">
                         <a href="<?php the_permalink(); ?>" class="btn">
@@ -39,10 +39,10 @@
 
         <div class="mb30 mt20 tac">
             <?php if(function_exists('wp_page_numbers')) { wp_page_numbers("<div class='pagination'>","</div>"); } ?>
-        </div>
-
     </div>
 
-    <?php get_sidebar(); ?>
+</div>
+
+<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
