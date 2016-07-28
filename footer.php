@@ -50,7 +50,7 @@
                 </div>
                 <div class="tar">
                     <a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备16010132号-2</a> <br/>
-                    Copyright © 2013-<?php echo date("Y"); echo " "; bloginfo('name'); ?> <a href="/">DIGCSS.COM</a>
+                    Copyright © 2013-<?php echo date("Y"); ?> <a href="/"><?php bloginfo('name');?></a>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
 
 <?php wp_footer(); ?>
 
-<script src="<?php bloginfo('template_url');?>/build/main.js"></script>
-<!--<script src="http://localhost:3001/main.js"></script>-->
+<!--<script src="<?php bloginfo('template_url');?>/build/main.js"></script>-->
+<script src="http://localhost:3001/main.js"></script>
 </body>
 </html>
